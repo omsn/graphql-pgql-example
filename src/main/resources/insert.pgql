@@ -1,0 +1,10 @@
+INSERT INTO books
+    VERTEX book1 LABELS (Book) PROPERTIES (book1.id = 1, book1.name = 'Harry Potter and the Philosopher''s Stone', book1.pageCount = 223),
+    VERTEX book2 LABELS (Book) PROPERTIES (book2.id = 2, book2.name = 'Moby Dick', book2.pageCount = 635),
+    VERTEX book3 LABELS (Book) PROPERTIES (book3.id = 3, book3.name = 'Interview with the vampire', book3.pageCount = 371),
+    VERTEX author1 LABELS (Author) PROPERTIES (author1.id = 1, author1.firstName = 'Joanne', author1.lastName = 'Rowling'),
+    VERTEX author2 LABELS (Author) PROPERTIES (author2.id = 2, author2.firstName = 'Herman', author2.lastName = 'Melville'),
+    VERTEX author3 LABELS (Author) PROPERTIES (author3.id = 3, author3.firstName = 'Anne', author3.lastName = 'Rice'),
+    EDGE book1author BETWEEN book1 AND author1 LABELS (written_by),
+    EDGE book2author BETWEEN book2 AND author2 LABELS (written_by),
+    EDGE book3author BETWEEN book3 AND author3 LABELS (written_by)
